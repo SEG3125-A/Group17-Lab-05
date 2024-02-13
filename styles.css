@@ -1,0 +1,81 @@
+body{
+  background-color: #FFF8E7;
+}
+
+.title {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.logo {
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+}
+
+.services {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.staff {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.card{
+     background-color: #dac292!important;
+     color: #5c2d1f;
+  }
+
+.jumbotron {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.customer-info {
+    border: 2px solid burlywood;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.appt-info {
+    border: 2px solid burlywood;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.submit-button {
+    background-color: #5c2d1f;
+    color: white;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+  }
+
+.card-img-top{
+    height: 200px;
+}
+a {
+    color: inherit; 
+}
+
+a:hover {
+    color: inherit;
+}
+.haircut-option {
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.haircut-option input[type="radio"]:checked + .card {
+    border: 2px solid #5c2d1f;
+}
