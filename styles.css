@@ -79,3 +79,13 @@ a:hover {
 .haircut-option input[type="radio"]:checked + .card {
     border: 2px solid #5c2d1f;
 }
+
+.professional-option {
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.professional-option input[type="radio"]:checked + .card {
+    border: 2px solid #5c2d1f;
+}
