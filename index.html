@@ -31,7 +31,7 @@
     </div>
 
     <div class="services" style="background-color:#c6bcb6; color: #5c2d1f;" data-toggle="tooltip" title="Our list of services">
-        <h2>Services</h2>
+        <h2><img src="images/services.png" alt="logo" style="width:40px;">Services</h2>
         <h5>We offer all of your hair needs</h5>
         <table class="table table-info table-hover" style="background-color:#e0e2e4; color: #5c2d1f;">
             <thead>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="staff" style="background-color:#e3e0cc; color: #5c2d1f;">
-        <h2>Meet our Staff!</h2>
+        <h2><img src="images/experts.png" alt="logo" style="width:40px;">Meet our Staff!</h2>
         <h5>The best of the best in their field</h5>
         <div class="card-columns" style="background-color:#e3e0cc; color: #5c2d1f;">
             <div class="card" style="width:200px;">
@@ -96,7 +96,7 @@
 
 
     <div class="jumbotron" style="background-color:#c6bcb6; color: #5c2d1f;">
-        <h2>Book Appointment</h2>
+        <h2><img src="images/book.png" alt="logo" style="width:40px;">Book Appointment</h2>
         <h5>Please select an appointment type and provide your contact info</h5>
     </div>
 
@@ -142,9 +142,40 @@
                 </div>
             </div>
         </div>
+
+        <h3>Select a Professional</h3>
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Mimi -->
+                <div class="col-md-4">
+                    <label class="professional-option">
+                        <input type="radio" name="professional" hidden />
+                        <div class="card">
+                            <img class="card-img-top" src="images/mimi.png" alt="Mimi" data-toggle="tooltip" title="Mimi">
+                            <div class="card-body">
+                                <p class="card-text">Mimi</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <!-- Lolo -->
+                <div class="col-md-4">
+                    <label class="professional-option">
+                        <input type="radio" name="professional" hidden />
+                        <div class="card">
+                            <img class="card-img-top" src="images/lolo.png" alt="Lolo" data-toggle="tooltip" title="Lolo">
+                            <div class="card-body">
+                                <p class="card-text">Lolo</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
         <div class="row mb-3">
             <div class="col">
-                <h3>Select a Service<h3>
+                <h3>Select a Service</h3>
                 <select class="form-control" id="service-selection">
                     <option selected>Choose...</option>
                     <option value="hair-cut">Hair Cut & Style</option>
@@ -160,7 +191,7 @@
                 <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput" data-toggle="tooltip" title="Select the year, month and day for your appointment">
             </div>
         </div>
-        <h3>Your Contact Info</h3>
+        <h3><img src="images/contact.png" alt="logo" style="width:40px;">Your Contact Info</h3>
         <div class="row">
             <div class="col">
                 <label for="customer-name">Name:</label>
@@ -174,7 +205,17 @@
                 <label for="customer-phone">Phone number:</label>
                 <input type="text" id="customer-phone" class="form-control" placeholder="###-###-####">
             </div>
-        </div><br>
+        </div>
+        <br>
+
+        <h3><img src="images/pay.png" alt="logo" style="width:40px;">Enter your credit card information</h3>
+        <div class="col">
+            <p> We enforce a 40$ deposit that will be returned unless you do not show up to your appointment </p>
+            <label for="customer-cc">Credit Card:</label>
+            <input type="text" id="customer-cc" class="form-control" placeholder="Enter CC Info">
+        </div>
+
+        <br>
         <div class="row">
             <div class="col">
                 <button type="button" id="submit-button" class="btn submit-button" data-toggle="tooltip" title="Submit to make your appointment">Submit</button>
