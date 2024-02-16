@@ -3,26 +3,26 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>SEG3125 - LAB 4 </title>
+	<title>SEG3125 - LAB 5 </title>
 
-<!-- Bootstrap -->
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
-    <!-- which is built on top of JQuery and offers additional possibilities -->
-    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <!-- Your own script -->
+    <!-- Personal script -->
     <script src="scripts/service.js"></script>
-
-    <!-- Your own additional style sheet -->
+  
+    <!-- Personal stylesheet -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 
 <body>
@@ -196,13 +196,11 @@
             </div>
         </div>
         <h3>Select the desired date of your appointment</h3>
-        <p>We are closed on Saturdays and Sundays</p>
-        <p>Mimi does not work on mondays</p>
-        <p>Lolo does not work on thursdays</p>
+        <p> Please note that we are closed on Sundays and national holidays </p>
         <div class="form-group row">
             <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
             <div class="col-10">
-                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput" data-toggle="tooltip" title="Select the year, month and day for your appointment">
+                <input type="text" id="dateTimeInput" placeholder="Choose Date">
             </div>
         </div>
         <h3><img src="images/contact.png" alt="logo" style="width:40px;">Your Contact Info</h3>

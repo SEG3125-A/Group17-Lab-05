@@ -14,7 +14,7 @@ function validatePhone(txtPhone) {
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/ 
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
 // Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
-var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"]
+var unavailableDates = ["02/23/2024","02/26/2024","02/26/2024","03/04/2024"]
 const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
@@ -51,11 +51,11 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/ 
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/ 
-    $( "#dateInput" ).datepicker(
+    $( "#dateTimeInput" ).datepicker(
         {
             dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: new Date('06/01/2020'),  
+            // no calendar before Feb 16st 2024
+            minDate: new Date('02/16/2024'),
             maxDate: '+4M',
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
