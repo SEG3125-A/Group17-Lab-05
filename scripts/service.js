@@ -35,8 +35,8 @@ $(document).ready(function(){
     // The "error" class in style.css defines yellow background and red foreground
     $("#customer-phone").on("change", function(){
         if (!validatePhone("customer-phone")){
-            alert("Wrong format for phone number");
-            $("#customer-phone").val("###-###-####");
+            alert("Wrong format for phone number. Please re-enter.");
+            $("#customer-phone").val("");
             $("#customer-phone").addClass("error");
         }
         else {
@@ -67,18 +67,18 @@ $(document).ready(function(){
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
     // Here, we put 
-    $("#debit").on("mouseenter", function(){
-        $("#debit").addClass("showInput");
+    $("#customer-cc").on("mouseenter", function(){
+        $("#customer-cc").addClass("showInput");
     });
 
-    $("#debit").on("mouseleave", function(){
-        $("#debit").removeClass("showInput");
+    $("#customer-cc").on("mouseleave", function(){
+        $("#customer-cc").removeClass("showInput");
     });
   
     // https://jqueryui.com/tooltip/ 
     // The class "highlight" used here is predefined in JQuery UI
     // the message of the tooltip is encoded in the input (in the HTML file)
-    $("#debit").tooltip({
+    $("#customer-cc").tooltip({
         classes: {
           "ui-tooltip": "highlight"
         }
