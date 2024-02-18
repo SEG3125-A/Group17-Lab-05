@@ -13,7 +13,7 @@ function validateName(txtName) {
 function validateEmail(txtEmail) {
     var a = document.getElementById(txtEmail).value;
     // This filter asks for the characters '@' and '.' to be included in the email
-    var filter = /^[A-Za-z]+\@[A-Za-z]+\.[A-Za-z]+$/;
+    var filter = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (filter.test(a)) {
         return true;
     }
@@ -25,7 +25,7 @@ function validateEmail(txtEmail) {
 function validatePhone(txtPhone) {
     var a = document.getElementById(txtPhone).value;
     // This filter asks for the format ###-###-#### for the phone number
-    var filter = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
+    var filter = /^(?:\d{3}|\(\d{3}\))[-/.]\d{3}[-/.]\d{4}$/;
     if (filter.test(a)) {
         return true;
     }
