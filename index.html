@@ -12,16 +12,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- Scripts necessary to use JQuery as well as JQueryUI library -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--Adding the JQueryUI theme, pepper-grinder to fit the aesthetic of the site-->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/pepper-grinder/jquery-ui.css" rel="stylesheet" type="text/css">
+ 
 
     <!-- Personal script -->
     <script src="scripts/service.js"></script>
   
     <!-- Personal stylesheet -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+
 
 </head>
 
@@ -32,17 +35,33 @@
             <div class="navbar-brand mx-auto text-center">
                 <img src="images/logo.png" alt="logo" style="height: 50px;">
                 <p>L-A-N's Hair Salon</p>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#staff">Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#book">Book with us</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <div class="title" style="background-color:#e3e0cc; color: #5c2d1f;">
+    <div id="contact" class="title" style="background-color:#e3e0cc; color: #5c2d1f;">
         <h2>L-A-N's Hair Salon</h2>
         <h5>Life is too short to have bad hair</h5>
-        <h6> Location: <a href="https://www.sesamestreet.org"> 123 Sesame Street</a> </h6>
+        <h6> Location: <a href="https://www.sesamestreet.org"> 123 Sesame Street</a></h6>
+        <h6>Phone: 613-447-7525</h6>
+
     </div>
 
-    <div class="services" style="background-color:#c6bcb6; color: #5c2d1f;" data-toggle="tooltip" title="Our list of services">
-        <h2><img src="images/services.png" alt="logo" style="width:40px;">Services</h2>
+    <div id="services" class="services" style="background-color:#c6bcb6; color: #5c2d1f;" data-toggle="tooltip" title="Our list of services">
+        <h2><img class="icon" src="images/services.png" alt="logo" style="width:40px;">Services</h2>
         <h5>We offer all of your hair needs</h5>
         <table class="table table-info table-hover" style="background-color:#e0e2e4; color: #5c2d1f;">
             <thead>
@@ -54,8 +73,8 @@
             <tbody>
             <tr>
                 <td>Hair Cut & Style</td>
-                <td>Hair cutting may range from merely trimming the uneven
-                    ends to transforming your hair shape! $55-$75</td>
+                <td>Hair cutting may range from trimming just the uneven
+                    ends to totally transforming your hair shape! $55-$75</td>
             </tr>
             <tr>
                 <td>All Over Colouring</td>
@@ -71,11 +90,11 @@
         </table>
     </div>
 
-    <div class="staff" style="background-color:#e3e0cc; color: #5c2d1f;">
-        <h2><img src="images/experts.png" alt="logo" style="width:40px;">Meet our Staff!</h2>
+    <div id="staff" class="staff" style="background-color:#e3e0cc; color: #5c2d1f;">
+        <h2><img class="icon" src="images/experts.png" alt="logo" style="width:40px;">Meet our Staff!</h2>
         <h5>The best of the best in their field</h5>
         <div class="card-columns" style="background-color:#e3e0cc; color: #5c2d1f;">
-            <div class="card" style="width:200px;">
+            <div class="card bg-info" style="width:200px;">
                 <img class="card-img-top" src="images/lolo.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <h4 class="card-title">Lolo</h4>
@@ -88,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-light" style="width:200px;">
+            <div class="card bg-info" style="width:200px;">
                 <img class="card-img-top" src="images/mimi.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <h4 class="card-title">Mimi</h4>
@@ -106,12 +125,10 @@
 
 
 
-    <div class="jumbotron" style="background-color:#c6bcb6; color: #5c2d1f;">
-        <h2><img src="images/book.png" alt="logo" style="width:40px;">Book Appointment</h2>
+    <div id="book" class="jumbotron" style="background-color:#c6bcb6; color: #5c2d1f;">
+        <h2><img class="icon" src="images/book.png" alt="logo" style="width:40px;">Book Appointment</h2>
         <h5>Please select an appointment type and provide your contact info</h5>
-    </div>
-
-    <form class="appt-info">
+    <form class="appt-info" style="background-color: #99a682;">
         <h3>Select a Haircut Style</h3>
         <div class="container mt-4">
             <div class="row">
@@ -154,33 +171,15 @@
             </div>
         </div>
 
-        <h3>Select a Professional</h3>
-        <div class="container mt-4">
-            <div class="row">
-                <!-- Mimi -->
-                <div class="col-md-4">
-                    <label class="professional-option">
-                        <input type="radio" name="professional" hidden />
-                        <div class="card">
-                            <img class="card-img-top" src="images/mimi.png" alt="Mimi" data-toggle="tooltip" title="Mimi">
-                            <div class="card-body">
-                                <p class="card-text">Mimi</p>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <!-- Lolo -->
-                <div class="col-md-4">
-                    <label class="professional-option">
-                        <input type="radio" name="professional" hidden />
-                        <div class="card">
-                            <img class="card-img-top" src="images/lolo.png" alt="Lolo" data-toggle="tooltip" title="Lolo">
-                            <div class="card-body">
-                                <p class="card-text">Lolo</p>
-                            </div>
-                        </div>
-                    </label>
-                </div>
+        <div class="row mb-3">
+            <div class="col">
+                <h3>Select a Professional</h3>
+                <select class="form-control" id="service-selection">
+                    <option selected>Choose...</option>
+                    <option value="Mimi-Style">Mimi</option>
+                    <option value="Lolo-Style">Lolo</option>
+                    <option value="Choose-for-me">No Preference / Choose for me</option>
+                </select>
             </div>
         </div>
 
@@ -203,7 +202,7 @@
                 <input type="text" id="dateTimeInput" placeholder="Choose Date">
             </div>
         </div>
-        <h3><img src="images/contact.png" alt="logo" style="width:40px;">Your Contact Info</h3>
+        <h3><img class="icon" src="images/contact.png" alt="logo" style="width:40px;">Your Contact Info</h3>
         <div class="row">
             <div class="col">
                 <label for="customer-name">Name:</label>
@@ -268,9 +267,10 @@
             </div>
         </div>
     </form>
+</div>
+<footer class="jumbotron text-center w-100 m-0" style="margin-bottom:0;background-color:rgba(255, 255, 255, 0.5);">
+    <p>Website designed by Lab Group 17: Amani, Lara, Naomi</p>
+</footer>
 
-    <footer class="jumbotron text-center" style="margin-bottom:0;background-color: #c6bcb6;">
-		<p>Website designed by Lab Group 17: Amani, Lara, Naomi</p>
-	</footer>
 </body>
 </html>
