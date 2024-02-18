@@ -208,23 +208,57 @@
             <div class="col">
                 <label for="customer-name">Name:</label>
                 <input type="text" id="customer-name" class="form-control" placeholder="Enter Name">
+                <br>
+                <div id="customer-name-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a name (alphabetical characters)
+                </div>
             </div>
             <div class="col">
                 <label for="customer-email">Email:</label>
                 <input type="text" id="customer-email" class="form-control" placeholder="Enter email">
+                <br>
+                <div id="customer-email-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a valid email
+                </div>
             </div>
             <div class="col">
                 <label for="customer-phone">Phone number:</label>
                 <input type="text" id="customer-phone" class="form-control" placeholder="###-###-####">
+                <br>
+                <div id="customer-phone-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a valid phone number
+                </div>
             </div>
         </div>
         <br>
 
         <h3><img src="images/pay.png" alt="logo" style="width:40px;">Enter your credit card information</h3>
-        <div class="col">
-            <p> We enforce a 40$ deposit that will be returned unless you do not show up to your appointment </p>
-            <label for="customer-cc">Credit Card:</label>
-            <input type="text" id="customer-cc" class="form-control" placeholder="Enter CC Info">
+        <p> We enforce a 40$ deposit that will be returned unless you do not show up to your appointment </p>
+        <div class="row">
+            <div class="col">
+                <label for="customer-cc">Credit Card:</label>
+                <input type="text" id="customer-cc" class="form-control" placeholder="Enter CC Info">
+                <br>
+                <div id="customer-cc-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a valid credit card number
+                </div>
+            </div>
+            <div class="col">
+                <label for="customer-cvv">CVV:</label>
+                <input type="text" id="customer-cvv" class="form-control" placeholder="###">
+                <br>
+                <div id="customer-cvv-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a 3-digit CVV
+                </div>
+            </div>
+            <div class="col">
+                <label for="customer-cc-exp">Expiration Date:</label>
+                <input type="text" id="customer-cc-exp" class="form-control" placeholder="MM/YY">
+                <br>
+                <div id="customer-cc-exp-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a valid expiration date
+                </div>
+            </div>
         </div>
 
         <br>
