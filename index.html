@@ -11,13 +11,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-    <!-- Scripts necessary to use JQuery as well as JQueryUI library -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
     <!--Adding the JQueryUI theme, pepper-grinder to fit the aesthetic of the site-->
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/pepper-grinder/jquery-ui.css" rel="stylesheet" type="text/css">
- 
+     <!-- Scripts necessary to use JQuery as well as JQueryUI library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- JQuery Tooltip -->
+    <script>
+    $( function() {
+      $( document ).tooltip();
+    } );
+    </script>
 
     <!-- Personal script -->
     <script src="scripts/service.js"></script>
@@ -60,7 +66,7 @@
 
     </div>
 
-    <div id="services" class="services" style="background-color:#c6bcb6; color: #5c2d1f;" data-toggle="tooltip" title="Our list of services">
+    <div id="services" class="services" style="background-color:#c6bcb6; color: #5c2d1f;" title="Our list of services">
         <h2><img class="icon" src="images/services.png" alt="logo" style="width:40px;">Services</h2>
         <h5>We offer all of your hair needs</h5>
         <table class="table table-info table-hover" style="background-color:#e0e2e4; color: #5c2d1f;">
@@ -100,7 +106,7 @@
                     <h4 class="card-title">Lolo</h4>
                     <p class="card-text">The colouring specialist.</p>
                     <a href="#Lolo" class="btn btn-primary" style="background-color:#5c2d1f; color: #f0f0f0;"
-                       data-toggle="collapse" title="See Lolo">See Profile </a>
+                       data-toggle="collapse" title="See Lolo's Qualifications">See Profile </a>
                     <div id="Lolo" class="collapse p-3">
                         <p>Lolo has been cutting hair for 20 years and got her training done at
                         the Harvard beauty institute. Hair is her passion and she loves her customers. </p>
@@ -113,7 +119,7 @@
                     <h4 class="card-title">Mimi</h4>
                     <p class="card-text">The curly hair specialist</p>
                     <a href="#Mimi" class="btn btn-primary" style="background-color:#5c2d1f; color: #f0f0f0;"
-                       data-toggle="collapse" title="See Mimi">See Profile</a>
+                       data-toggle="collapse" title="See Mimi's Qualifications">See Profile</a>
                     <div id="Mimi" class="collapse p-3">
                         <p>Mimi has been cutting hair for 8 years and is known for her curly
                             hair techniques. She strives to give her curly haired customers diverse hairstyling options.</p>
@@ -137,7 +143,7 @@
                     <label class="haircut-option">
                         <input type="radio" name="haircut" hidden />
                         <div class="card">
-                            <img class="card-img-top" src="images/long.jpg" alt="Long Hair" data-toggle="tooltip" title="Long Hair">
+                            <img class="card-img-top" src="images/long.jpg" title="Select if you have long hair">
                             <div class="card-body">
                                 <p class="card-text">Long</p>
                             </div>
@@ -149,7 +155,7 @@
                     <label class="haircut-option">
                         <input type="radio" name="haircut" hidden />
                         <div class="card">
-                            <img class="card-img-top" src="images/medium.jpg" alt="Medium Hair" data-toggle="tooltip" title="Medium Hair">
+                            <img class="card-img-top" src="images/medium.jpg" title="Select if you have medium-length hair">
                             <div class="card-body">
                                 <p class="card-text">Medium</p>
                             </div>
@@ -160,7 +166,7 @@
                 <div class="col-md-4">
                     <label class="haircut-option">
                         <input type="radio" name="haircut" hidden />
-                        <div class="card" data-toggle="tooltip" title="Short Hair">
+                        <div class="card" title="Select if you have short hair">
                             <img class="card-img-top" src="images/short.jpg" alt="Short Hair">
                             <div class="card-body">
                                 <p class="card-text">Short</p>
@@ -205,8 +211,12 @@
         <h3><img class="icon" src="images/contact.png" alt="logo" style="width:40px;">Your Contact Info</h3>
         <div class="row">
             <div class="col">
-                <label for="customer-name">Name:</label>
-                <input type="text" id="customer-name" class="form-control" placeholder="Enter Name">
+                <label for="customer-fname">First Name:</label>
+                <input type="text" id="customer-fname" class="form-control" placeholder="Enter First Name">
+            </div>
+            <div class="col">
+                <label for="customer-lname">Last Name:</label>
+                <input type="text" id="customer-lname" class="form-control" placeholder="Enter Last Name" title="This is optional">
             </div>
             <div class="col">
                 <label for="customer-email">Email:</label>
@@ -214,7 +224,7 @@
             </div>
             <div class="col">
                 <label for="customer-phone">Phone number:</label>
-                <input type="text" id="customer-phone" class="form-control" placeholder="###-###-####">
+                <input type="text" id="customer-phone" class="form-control" placeholder="###-###-####" title="Phone number must only consist of numbers">
             </div>
             <div class="col">
                 <label for="customer-address">Address:</label>
@@ -222,7 +232,7 @@
             </div>
         </div>
         <br>
-        <h3><img class="icon" src="images/pay.png" alt="logo" style="width:40px;">Enter your card information</h3>
+        <h3><img class="icon" src="images/pay.png" alt="logo" style="width:40px;">Enter your credit card information</h3>
         
            
             <p>We enforce a 40$ deposit that will be returned unless you do not show up to your appointment</p>
@@ -242,7 +252,7 @@
             <br>
             <div class="row">
                 <div class="col">
-                    <button type="button" id="submit-button" class="btn submit-button" data-toggle="tooltip" title="Submit to make your appointment">Submit</button>
+                    <button type="button" id="submit-button" class="btn submit-button" title="Submit to make your appointment">Submit</button>
                 </div>
             </div>
         
