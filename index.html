@@ -211,54 +211,67 @@
         <h3><img class="icon" src="images/contact.png" alt="logo" style="width:40px;">Your Contact Info</h3>
         <div class="row">
             <div class="col">
-                <label for="customer-fname">First Name:</label>
-                <input type="text" id="customer-fname" class="form-control" placeholder="Enter First Name">
-            </div>
-            <div class="col">
-                <label for="customer-lname">Last Name:</label>
-                <input type="text" id="customer-lname" class="form-control" placeholder="Enter Last Name" title="This is optional">
+                <label for="customer-name">Name:</label>
+                <input type="text" id="customer-name" class="form-control" placeholder="Enter Name">
+                <br>
+                <div id="customer-name-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a name (alphabetical characters)
+                </div>
             </div>
             <div class="col">
                 <label for="customer-email">Email:</label>
                 <input type="text" id="customer-email" class="form-control" placeholder="Enter email">
+                <br>
+                <div id="customer-email-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a valid email
+                </div>
             </div>
             <div class="col">
                 <label for="customer-phone">Phone number:</label>
-                <input type="text" id="customer-phone" class="form-control" placeholder="###-###-####" title="Phone number must only consist of numbers">
-            </div>
-            <div class="col">
-                <label for="customer-address">Address:</label>
-                <input type="text" id="customer-address" class="form-control" placeholder="Your Address">
+                <input type="text" id="customer-phone" class="form-control" placeholder="###-###-####">
+                <br>
+                <div id="customer-phone-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a valid phone number
+                </div>
             </div>
         </div>
         <br>
-        <h3><img class="icon" src="images/pay.png" alt="logo" style="width:40px;">Enter your credit card information</h3>
-        
-           
-            <p>We enforce a 40$ deposit that will be returned unless you do not show up to your appointment</p>
 
-        
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="customer-ccn">Card Number:</label>
-                    <input type="text" id="customer-ccn" class="form-control" placeholder="Enter Card Number">
-                </div>
-        
-                <div class="col-md-6">
-                    <label for="customer-cc">CVV:</label>
-                    <input type="text" id="customer-cc" class="form-control" placeholder="Enter CVV">
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <button type="button" id="submit-button" class="btn submit-button" title="Submit to make your appointment">Submit</button>
+        <h3><img src="images/pay.png" alt="logo" style="width:40px;">Enter your credit card information</h3>
+        <p> We enforce a 40$ deposit that will be returned unless you do not show up to your appointment </p>
+        <div class="row">
+            <div class="col">
+                <label for="customer-cc">Credit Card:</label>
+                <input type="text" id="customer-cc" class="form-control" placeholder="Enter CC Info">
+                <br>
+                <div id="customer-cc-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a valid credit card number
                 </div>
             </div>
-        
+            <div class="col">
+                <label for="customer-cvv">CVV:</label>
+                <input type="text" id="customer-cvv" class="form-control" placeholder="###">
+                <br>
+                <div id="customer-cvv-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a 3-digit CVV
+                </div>
+            </div>
+            <div class="col">
+                <label for="customer-cc-exp">Expiration Date:</label>
+                <input type="text" id="customer-cc-exp" class="form-control" placeholder="MM/YY">
+                <br>
+                <div id="customer-cc-exp-alert" class="alert alert-danger d-none">
+                    <strong>Error:</strong> Please enter a valid expiration date
+                </div>
+            </div>
         </div>
 
-
+        <br>
+        <div class="row">
+            <div class="col">
+                <button type="button" id="submit-button" class="btn submit-button" data-toggle="tooltip" title="Submit to make your appointment">Submit</button>
+            </div>
+        </div>
     </form>
 </div>
 <footer class="jumbotron text-center w-100 m-0" style="margin-bottom:0;background-color:rgba(255, 255, 255, 0.5);">
